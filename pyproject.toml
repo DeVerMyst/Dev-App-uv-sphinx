@@ -1,0 +1,24 @@
+[project]
+name = "dev-app-uv-sphinx"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "sphinx",
+    "sphinx-rtd-theme",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "sphinx>=9.0.4",
+    "sphinx-rtd-theme>=0.5.1",
+]
