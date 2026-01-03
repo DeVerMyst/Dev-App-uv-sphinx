@@ -1,24 +1,20 @@
 [project]
 name = "dev-app-uv-sphinx"
 version = "0.1.0"
-description = "Add your description here"
+description = "API de formation UV et Sphinx"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi",
     "uvicorn",
+    "pydantic",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "pytest",
-    "sphinx",
-    "sphinx-rtd-theme",
-]
-
+# On utilise les dependency-groups (standard uv) pour le développement
 [dependency-groups]
 dev = [
     "pytest>=9.0.2",
-    "sphinx>=9.0.4",
-    "sphinx-rtd-theme>=3.0.0rc1",
+    "sphinx>=8.1.3",
+    "sphinx-rtd-theme>=3.0.0",
 ]
+

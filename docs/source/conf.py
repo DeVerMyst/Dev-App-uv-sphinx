@@ -1,3 +1,11 @@
+import os
+import sys
+
+# pour arriver à la racine du projet C:\GITHUB\Dev-App-uv-sphinx/api
+# On remonte à la racine, puis on descend dans 'api'
+sys.path.insert(0, os.path.abspath('../../api'))
+print(f"DEBUG: Sphinx cherche dans : {os.path.abspath('../../api')}")
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:

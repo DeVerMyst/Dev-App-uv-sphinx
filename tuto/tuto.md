@@ -76,3 +76,8 @@ copier coller dans docs.yml le code
 
 Aller dans github pages (setting-->pages)
 Dans Build and deployment, choisir `github actions`
+
+# pont entre les modules pour sphinx
+Le fichier api.rst fait le pont pour la doc
+
+et dans le fichier index.rst il faut ajouter '   api' à la fin et avec 3 espaces (api.rst)
