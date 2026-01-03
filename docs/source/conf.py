@@ -29,7 +29,11 @@ extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.autodoc',  # Pour extraire la doc de ton code
     'sphinx.ext.napoleon', # Pour supporter les docstrings style Google/NumPy
+    'sphinx.ext.mathjax', # Pour latex 
+    "sphinx.ext.viewcode",
+    "myst_parser",    
 ]
+
 
 templates_path = ['_templates']
 exclude_patterns = []

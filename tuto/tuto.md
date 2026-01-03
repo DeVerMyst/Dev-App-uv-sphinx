@@ -81,3 +81,16 @@ Dans Build and deployment, choisir `github actions`
 Le fichier api.rst fait le pont pour la doc
 
 et dans le fichier index.rst il faut ajouter '   api' à la fin et avec 3 espaces (api.rst)
+
+# extension utiles
+```
+extensions = [
+    'sphinx_rtd_theme',
+    'sphinx.ext.autodoc',  # Pour extraire la doc de ton code
+    'sphinx.ext.napoleon', # Pour supporter les docstrings style Google/NumPy
+    'sphinx.ext.mathjax', # Pour latex 
+    "sphinx.ext.viewcode", # Pour afficher le code source
+    "sphinx_gallery.gen_gallery", # Pour les galleries d'images
+    "myst_parser",    # Pour le markdown
+]
+```

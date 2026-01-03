@@ -14,8 +14,8 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=8dde47fa"></script>
-      <script src="_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -75,16 +75,93 @@
 <p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
 documentation for details.</p>
+</section>
+<section id="packaging-initiation">
+<h1>PACKAGING INITIATION<a class="headerlink" href="#packaging-initiation" title="Link to this heading"></a></h1>
+<a class="reference internal image-reference" href="_images/logo.png"><img alt="mon logo" src="_images/logo.png" style="width: 400px;" />
+</a>
+<section id="sommaire">
+<h2>Sommaire<a class="headerlink" href="#sommaire" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api.html">Référence Technique</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#models.models.FakeIAModel"><code class="docutils literal notranslate"><span class="pre">FakeIAModel</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html#modules.modules.read_config_file"><code class="docutils literal notranslate"><span class="pre">read_config_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-models.models">Gestion des modèles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-modules.my_maths">Outils Mathématiques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-modules.modules">Logique métier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#bibliographie">Bibliographie</a></li>
 </ul>
 </li>
 </ul>
 </div>
+<section id="mon-api-de-demo-promo-2026">
+<h3>🚀 Mon API de Démo (Promo 2026)<a class="headerlink" href="#mon-api-de-demo-promo-2026" title="Link to this heading"></a></h3>
+<p><a class="reference external" href="https://github.com/DeVerMyst/Dev-App-uv-sphinx/actions"><img alt="Build Status" src="https://github.com/PythonOT/POT/actions/workflows/build_tests.yml/badge.svg" /></a>
+<a class="reference external" href="https://github.com/DeVerMyst/Dev-App-uv-sphinx/blob/main/LICENSE"><img alt="License" src="https://anaconda.org/conda-forge/pot/badges/license.svg" /></a></p>
+<p>Bienvenue dans ce projet d’exemple. Cette application est une API développée avec <strong>FastAPI</strong>, gérée par <strong>uv</strong> pour le packaging et documentée avec <strong>Sphinx</strong>.</p>
+<p>Website et documentation: <a class="reference external" href="https://devermyst.github.io/Dev-App-uv-sphinx/">https://devermyst.github.io/Dev-App-uv-sphinx/</a></p>
+<p>Source Code (MIT):
+<a class="reference external" href="https://github.com/DeVerMyst/Dev-App-uv-sphinx">https://github.com/DeVerMyst/Dev-App-uv-sphinx</a></p>
+<section id="pre-requis">
+<h4>🛠️ Pré-requis<a class="headerlink" href="#pre-requis" title="Link to this heading"></a></h4>
+<p>Vous devez avoir <strong>uv</strong> installé sur votre machine. Si ce n’est pas le cas :</p>
+<ul class="simple">
+<li><p><strong>Windows (PowerShell) :</strong> <code class="docutils literal notranslate"><span class="pre">powershell</span> <span class="pre">-c</span> <span class="pre">&quot;irm</span> <span class="pre">https://astral.sh/uv/install.ps1</span> <span class="pre">|</span> <span class="pre">iex&quot;</span></code></p></li>
+<li><p><strong>macOS / Linux :</strong> <code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">-LsSf</span> <span class="pre">https://astral.sh/uv/install.sh</span> <span class="pre">|</span> <span class="pre">sh</span></code></p></li>
+</ul>
+</section>
+<section id="installation-magie-uv">
+<h4>📦 Installation (Magie <code class="docutils literal notranslate"><span class="pre">uv</span></code>)<a class="headerlink" href="#installation-magie-uv" title="Link to this heading"></a></h4>
+<p>Pour installer le projet, les dépendances et l’environnement virtuel en une seule commande :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>sync
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note :</strong> <code class="docutils literal notranslate"><span class="pre">uv</span></code> installera automatiquement la bonne version de Python si vous ne l’avez pas.</p>
+</div></blockquote>
+</section>
+<section id="lancement-de-l-api">
+<h4>🚀 Lancement de l’API<a class="headerlink" href="#lancement-de-l-api" title="Link to this heading"></a></h4>
+<p>Pour lancer l’application en mode développement (avec rechargement automatique) :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>uvicorn<span class="w"> </span>app:app<span class="w"> </span>--reload
+</pre></div>
+</div>
+<p>L’API sera accessible sur <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8000</span></code>. Vous pouvez consulter la doc interactive (Swagger) sur <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:8000/docs</span></code>.</p>
+</section>
+<section id="tests">
+<h4>🧪 Tests<a class="headerlink" href="#tests" title="Link to this heading"></a></h4>
+<p>Pour exécuter la suite de tests avec <strong>pytest</strong> :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>pytest
+</pre></div>
+</div>
+</section>
+<section id="documentation-sphinx">
+<h4>📚 Documentation Sphinx<a class="headerlink" href="#documentation-sphinx" title="Link to this heading"></a></h4>
+<p>La documentation est hébergée sur <strong>GitHub Pages</strong>. Pour la générer localement :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>uv<span class="w"> </span>run<span class="w"> </span>sphinx-build<span class="w"> </span>-b<span class="w"> </span>html<span class="w"> </span>docs/source<span class="w"> </span>docs/build/html
+</pre></div>
+</div>
+<p>Ensuite, ouvrez le fichier <code class="docutils literal notranslate"><span class="pre">docs/build/html/index.html</span></code> dans votre navigateur.</p>
+</section>
+<section id="structure-du-projet">
+<h4>📂 Structure du projet<a class="headerlink" href="#structure-du-projet" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">app.py</span></code> : Point d’entrée de l’API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modules/</span></code> : Logique métier de l’application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models/</span></code> : Modèles de données (Pydantic).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/</span></code> : Tests unitaires et d’intégration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docs/</span></code> : Fichiers sources de la documentation Sphinx.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> : Configuration du projet et dépendances.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="contributeur">
+<h4>Contributeur<a class="headerlink" href="#contributeur" title="Link to this heading"></a></h4>
+<a href="https://devermyst.github.io/Dev-App-uv-sphinx/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=devermyst/Dev-App-uv-sphinx" />
+</a></section>
+</section>
+</section>
 </section>
 
 

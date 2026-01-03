@@ -1,3 +1,7 @@
+"""
+Introduction au packaging
+"""
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 from models.models import FakeIAModel

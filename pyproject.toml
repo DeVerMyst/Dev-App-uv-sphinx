@@ -8,6 +8,9 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "pydantic",
+    "myst-parser>=4.0.1",
+    "sphinx-gallery>=0.20.0",
+    "furo>=2025.12.19",
 ]
 
 # On utilise les dependency-groups (standard uv) pour le développement
@@ -18,3 +21,5 @@ dev = [
     "sphinx-rtd-theme>=3.0.0",
 ]
 
+[tool.setuptools]
+packages = ["api"]
