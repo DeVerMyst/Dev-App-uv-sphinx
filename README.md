@@ -59,3 +59,15 @@ On va dans le dossier `docs` puis
 uv run sphinx-quickstart
 ```
 
+# github actions et github pages
+
+créer les dossiers 
+```
+.github
+└──workflows/
+   └── docs.yml
+```
+copier coller dans docs.yml le code
+
+Aller dans github pages (setting-->pages)
+Dans Build and deployment, choisir `github actions`
