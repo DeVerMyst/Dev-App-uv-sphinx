@@ -1,6 +1,7 @@
 # 🚀 Mon API de Démo (Promo 2026)
 [![Build Status](https://github.com/DeVerMyst/Dev-App-uv-sphinx/actions/workflows/build_tests.yml/badge.svg)](https://github.com/DeVerMyst/Dev-App-uv-sphinx/actions)
 [![License](https://anaconda.org/conda-forge/pot/badges/license.svg)](https://github.com/DeVerMyst/Dev-App-uv-sphinx/blob/main/LICENSE)
+[![Documentation Status](https://img.shields.io/badge/docs-latest-blue.svg)](Lien_Vers_Ta_Doc)
 
 Bienvenue dans ce projet d'exemple. Cette application est une API développée avec **FastAPI**, gérée par **uv** pour le packaging et documentée avec **Sphinx**.
 
