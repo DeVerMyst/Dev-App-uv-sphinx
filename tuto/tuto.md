@@ -32,19 +32,21 @@ uv init PATH
 ```bash
 uv venv
 ```
-
+Puis syntaxe habituel pour lancer l'environnement virtuel
 # Architecture
 ```bash
-mon-api-ia/
+projet/
 ├── pyproject.toml
-├── app.py              # Point d'entrée FastAPI
-├── modules/
-│   └── modules.py      # Logique métier
-├── models/
-│   └── models.py       # Modèle IA
-├── tests/
-│   └── my_pytests.py   # Tes tests
-└── docs/               # Dossier pour la doc 
+├── api
+│   ├── app.py              # Point d'entrée FastAPI
+│   ├── modules/
+│   │   └── modules.py      # Logique métier
+│   ├── models/
+│   │   └── models.py       # Modèle IA
+│   └── docs/               # Dossier pour la doc + autres truc
+└── tests/
+    └── my_pytests.py   # Tes tests
+
 ```
 
 # Installation des librairies et uv.lock
@@ -52,6 +54,7 @@ mon-api-ia/
 uv add fastapi uvicorn
 uv add --dev pytest sphinx sphinx-rtd-theme
 ```
+si le package est distribué les utilisateurs n'auront pas les outils de dev comme le test ou la génération de la doc, ca rend le package plus léger
 
 # Initialisation de la doc
 On va dans le dossier `docs` puis 
@@ -63,6 +66,7 @@ uv run sphinx-quickstart
 ```bash
 uv add --dev "sphinx-rtd-theme>=3.0.0rc1"
 ```
+il y a d'autre thème comme `furo` c'est une question de choix
 
 # github actions et github pages
 
@@ -72,7 +76,7 @@ créer les dossiers
 └──workflows/
    └── docs.yml
 ```
-copier coller dans docs.yml le code
+copier coller dans docs.yml le code que je vous passe
 
 Aller dans github pages (setting-->pages)
 Dans Build and deployment, choisir `github actions`
@@ -80,8 +84,29 @@ Dans Build and deployment, choisir `github actions`
 # pont entre les modules pour sphinx
 Le fichier api.rst fait le pont pour la doc
 
-et dans le fichier index.rst il faut ajouter '   api' à la fin et avec 3 espaces (api.rst)
+et dans le fichier index.rst il faut ajouter '___api' à la fin et avec 3 ('\_') espaces (api.rst)
 
+# exemple d'un index.rst
+```rst
+PACKAGING INITIATION
+=============================
+
+.. image:: _static/logo.png
+  :width: 400
+  :alt: mon logo
+
+Sommaire
+--------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   api
+
+.. include:: ../../README.md
+   :parser: myst_parser.sphinx_
+   ```
 # extension utiles
 ```
 extensions = [
@@ -93,4 +118,23 @@ extensions = [
     "sphinx_gallery.gen_gallery", # Pour les galleries d'images
     "myst_parser",    # Pour le markdown
 ]
+```
+
+# synchro UV + package
+`uv sync`
+`uv add myst-parser`
+`uv add sphinx_gallery`
+
+# Build de la doc
+`uv run sphinx-build -b html docs/source public`
+
+# en tête de conf.py
+```python
+import os
+import sys
+
+# pour arriver à la racine du projet C:\GITHUB\Dev-App-uv-sphinx/api
+# On remonte à la racine, puis on descend dans 'api'
+sys.path.insert(0, os.path.abspath('../../api'))
+print(f"DEBUG: Sphinx cherche dans : {os.path.abspath('../../api')}")
 ```
