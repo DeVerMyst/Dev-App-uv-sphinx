@@ -44,8 +44,8 @@ projet/
 │   ├── models/
 │   │   └── models.py       # Modèle IA
 │   └── docs/               # Dossier pour la doc + autres truc
-└── tests/
-    └── my_pytests.py   # Tes tests
+└── test/
+    └── test_valid.py   # Tes tests
 
 ```
 
