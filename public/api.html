@@ -20,6 +20,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Référence Technique" href="models.html" />
     <link rel="prev" title="DEV-APP-UV-SPHINX documentation" href="index.html" /> 
 </head>
 
@@ -46,26 +47,28 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">DEV-APP-UV-SPHINX documentation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Référence Technique</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-models.models">Gestion des modèles</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#models.models.FakeIAModel"><code class="docutils literal notranslate"><span class="pre">FakeIAModel</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#models.models.FakeIAModel.model_name"><code class="docutils literal notranslate"><span class="pre">FakeIAModel.model_name</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#models.models.FakeIAModel.is_ready"><code class="docutils literal notranslate"><span class="pre">FakeIAModel.is_ready</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#models.models.FakeIAModel.predict"><code class="docutils literal notranslate"><span class="pre">FakeIAModel.predict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-api.models.models">Gestion des modèles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api.models.models.FakeIAModel"><code class="docutils literal notranslate"><span class="pre">FakeIAModel</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#api.models.models.FakeIAModel.model_name"><code class="docutils literal notranslate"><span class="pre">FakeIAModel.model_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.models.models.FakeIAModel.is_ready"><code class="docutils literal notranslate"><span class="pre">FakeIAModel.is_ready</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#api.models.models.FakeIAModel.predict"><code class="docutils literal notranslate"><span class="pre">FakeIAModel.predict()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-modules.my_maths">Outils Mathématiques</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#modules.my_maths.calculer_moyenne"><code class="docutils literal notranslate"><span class="pre">calculer_moyenne()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-api.modules.my_maths">Outils Mathématiques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api.modules.my_maths.calculer_moyenne"><code class="docutils literal notranslate"><span class="pre">calculer_moyenne()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-modules.modules">Logique métier</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#modules.modules.read_config_file"><code class="docutils literal notranslate"><span class="pre">read_config_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-api.modules.modules">Logique métier</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api.modules.modules.read_config_file"><code class="docutils literal notranslate"><span class="pre">read_config_file()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#bibliographie">Bibliographie</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Référence Technique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Référence Technique</a></li>
 </ul>
 
         </div>
@@ -94,17 +97,17 @@
              
   <section id="reference-technique">
 <h1>Référence Technique<a class="headerlink" href="#reference-technique" title="Link to this heading"></a></h1>
-<section id="module-models.models">
-<span id="gestion-des-modeles"></span><h2>Gestion des modèles<a class="headerlink" href="#module-models.models" title="Link to this heading"></a></h2>
+<section id="module-api.models.models">
+<span id="gestion-des-modeles"></span><h2>Gestion des modèles<a class="headerlink" href="#module-api.models.models" title="Link to this heading"></a></h2>
 <p>Ce module gère le chargement et l’exécution du modèle d’IA.</p>
 <dl class="py class">
-<dt class="sig sig-object py" id="models.models.FakeIAModel">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.models.</span></span><span class="sig-name descname"><span class="pre">FakeIAModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Promo-GPT-v1'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/models.html#FakeIAModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.models.FakeIAModel" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="api.models.models.FakeIAModel">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">api.models.models.</span></span><span class="sig-name descname"><span class="pre">FakeIAModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Promo-GPT-v1'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/models/models.html#FakeIAModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.models.models.FakeIAModel" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Simulateur de modèle d’intelligence artificielle pour la promo 2026.</p>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="models.models.FakeIAModel.model_name">
-<span class="sig-name descname"><span class="pre">model_name</span></span><a class="headerlink" href="#models.models.FakeIAModel.model_name" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="api.models.models.FakeIAModel.model_name">
+<span class="sig-name descname"><span class="pre">model_name</span></span><a class="headerlink" href="#api.models.models.FakeIAModel.model_name" title="Link to this definition"></a></dt>
 <dd><p>Nom du modèle chargé.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -114,8 +117,8 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="models.models.FakeIAModel.is_ready">
-<span class="sig-name descname"><span class="pre">is_ready</span></span><a class="headerlink" href="#models.models.FakeIAModel.is_ready" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="api.models.models.FakeIAModel.is_ready">
+<span class="sig-name descname"><span class="pre">is_ready</span></span><a class="headerlink" href="#api.models.models.FakeIAModel.is_ready" title="Link to this definition"></a></dt>
 <dd><p>État du modèle (prêt ou non).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -125,8 +128,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="models.models.FakeIAModel.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/models.html#FakeIAModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#models.models.FakeIAModel.predict" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="api.models.models.FakeIAModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/api/models/models.html#FakeIAModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.models.models.FakeIAModel.predict" title="Link to this definition"></a></dt>
 <dd><p>Effectue une prédiction basée sur le texte fourni.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -144,11 +147,11 @@
 </dd></dl>
 
 </section>
-<section id="module-modules.my_maths">
-<span id="outils-mathematiques"></span><h2>Outils Mathématiques<a class="headerlink" href="#module-modules.my_maths" title="Link to this heading"></a></h2>
+<section id="module-api.modules.my_maths">
+<span id="outils-mathematiques"></span><h2>Outils Mathématiques<a class="headerlink" href="#module-api.modules.my_maths" title="Link to this heading"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="modules.my_maths.calculer_moyenne">
-<span class="sig-prename descclassname"><span class="pre">modules.my_maths.</span></span><span class="sig-name descname"><span class="pre">calculer_moyenne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/modules/my_maths.html#calculer_moyenne"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.my_maths.calculer_moyenne" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="api.modules.my_maths.calculer_moyenne">
+<span class="sig-prename descclassname"><span class="pre">api.modules.my_maths.</span></span><span class="sig-name descname"><span class="pre">calculer_moyenne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/api/modules/my_maths.html#calculer_moyenne"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.modules.my_maths.calculer_moyenne" title="Link to this definition"></a></dt>
 <dd><p>Calcule la moyenne arithmétique d’une liste de nombres.</p>
 <p>La formule mathématique est la suivante :</p>
 <div class="math notranslate nohighlight">
@@ -169,12 +172,12 @@ aux valeurs aberrantes.</p>
 </dd></dl>
 
 </section>
-<section id="module-modules.modules">
-<span id="logique-metier"></span><h2>Logique métier<a class="headerlink" href="#module-modules.modules" title="Link to this heading"></a></h2>
+<section id="module-api.modules.modules">
+<span id="logique-metier"></span><h2>Logique métier<a class="headerlink" href="#module-api.modules.modules" title="Link to this heading"></a></h2>
 <p>Modules utilitaires pour la manipulation de fichiers.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="modules.modules.read_config_file">
-<span class="sig-prename descclassname"><span class="pre">modules.modules.</span></span><span class="sig-name descname"><span class="pre">read_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/modules/modules.html#read_config_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#modules.modules.read_config_file" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py" id="api.modules.modules.read_config_file">
+<span class="sig-prename descclassname"><span class="pre">api.modules.modules.</span></span><span class="sig-name descname"><span class="pre">read_config_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/api/modules/modules.html#read_config_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#api.modules.modules.read_config_file" title="Link to this definition"></a></dt>
 <dd><p>Lit un fichier texte et retourne son contenu.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -209,6 +212,7 @@ aux valeurs aberrantes.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="DEV-APP-UV-SPHINX documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="models.html" class="btn btn-neutral float-right" title="Référence Technique" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

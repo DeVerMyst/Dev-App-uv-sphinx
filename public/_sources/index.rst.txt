@@ -13,7 +13,7 @@ documentation for details.
 PACKAGING INITIATION
 =============================
 
-.. image:: _static/logo.png
+.. image:: _static/img/logo.png
   :width: 400
   :alt: mon logo
 
@@ -26,7 +26,8 @@ Sommaire
 
    self
    api
-   api2
+   models
+   modules
 
 .. include:: ../../README.md
    :parser: myst_parser.sphinx_

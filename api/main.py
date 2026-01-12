@@ -4,8 +4,8 @@ Introduction au packaging
 
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
-from models.models import FakeIAModel
-from modules.modules import read_config_file
+from api.models.models import FakeIAModel
+from api.modules.modules import read_config_file
 
 app = FastAPI(title="API d'Apprentissage UV")
 

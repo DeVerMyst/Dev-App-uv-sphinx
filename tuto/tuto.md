@@ -15,7 +15,11 @@ Ouvre un terminal (PowerShell) et colle cette commande :
 
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+ou si ca ne marche pas 
 
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
 # Initialisation
@@ -33,40 +37,44 @@ uv init PATH
 uv venv
 ```
 Puis syntaxe habituel pour lancer l'environnement virtuel
+
 # Architecture
 ```bash
 projet/
 ├── pyproject.toml
 ├── api
-│   ├── app.py              # Point d'entrée FastAPI
+│   ├── app.py             # Point d'entrée FastAPI
 │   ├── modules/
-│   │   └── modules.py      # Logique métier
+│   │   └── modules.py     # Logique métier
 │   ├── models/
-│   │   └── models.py       # Modèle IA
-│   └── docs/               # Dossier pour la doc + autres truc
+│   │   └── models.py      # Modèle IA
+│   └── docs/              # Dossier pour la doc + autres truc
 └── test/
-    └── test_valid.py   # Tes tests
+    └── test_valid.py      # Tests
 
 ```
 
 # Installation des librairies et uv.lock
 ```bash
 uv add fastapi uvicorn
-uv add --dev pytest sphinx sphinx-rtd-theme
+uv add --dev pytest sphinx==8.2.3 
+uv add --dev myst-parser
+uv add --dev sphinx_gallery
 ```
+
 si le package est distribué les utilisateurs n'auront pas les outils de dev comme le test ou la génération de la doc, ca rend le package plus léger
+
+# Installation du thème
+```bash
+uv add --dev "sphinx-rtd-theme>=3.0.0rc1"
+```
+il y a d'autre thème comme `furo` c'est une question de choix
 
 # Initialisation de la doc
 On va dans le dossier `docs` puis 
 ```bash
 uv run sphinx-quickstart
 ```
-
-# Mise à jour du thème
-```bash
-uv add --dev "sphinx-rtd-theme>=3.0.0rc1"
-```
-il y a d'autre thème comme `furo` c'est une question de choix
 
 # github actions et github pages
 
@@ -81,49 +89,20 @@ copier coller dans docs.yml le code que je vous passe
 Aller dans github pages (setting-->pages)
 Dans Build and deployment, choisir `github actions`
 
-# pont entre les modules pour sphinx
-Le fichier api.rst fait le pont pour la doc
+# pont entre les modules pour sphinx (docs/)
+Le fichier api.rst, modules.rst et models.rst font le pont pour la doc
 
 et dans le fichier index.rst il faut ajouter '___api' à la fin et avec 3 ('\_') espaces (api.rst)
+idem pour models et modules
 
 # exemple d'un index.rst
-```rst
-PACKAGING INITIATION
-=============================
+voir le code dans `docs/index.rst`
 
-.. image:: _static/logo.png
-  :width: 400
-  :alt: mon logo
-
-Sommaire
---------
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   api
-
-.. include:: ../../README.md
-   :parser: myst_parser.sphinx_
-   ```
 # extension utiles
-```
-extensions = [
-    'sphinx_rtd_theme',
-    'sphinx.ext.autodoc',  # Pour extraire la doc de ton code
-    'sphinx.ext.napoleon', # Pour supporter les docstrings style Google/NumPy
-    'sphinx.ext.mathjax', # Pour latex 
-    "sphinx.ext.viewcode", # Pour afficher le code source
-    "sphinx_gallery.gen_gallery", # Pour les galleries d'images
-    "myst_parser",    # Pour le markdown
-]
-```
+voir le code dans `docs/conf.py`
 
 # synchro UV + package
 `uv sync`
-`uv add myst-parser`
-`uv add sphinx_gallery`
 
 # Build de la doc
 `uv run sphinx-build -b html docs/source public`
@@ -133,8 +112,10 @@ extensions = [
 import os
 import sys
 
-# pour arriver à la racine du projet C:\GITHUB\Dev-App-uv-sphinx/api
-# On remonte à la racine, puis on descend dans 'api'
+sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(0, os.path.abspath('../../api'))
-print(f"DEBUG: Sphinx cherche dans : {os.path.abspath('../../api')}")
+print(f"DEBUG: Sphinx cherche dans : {os.path.abspath('../..')}")
 ```
+
+# Faire tourner les tests
+`uv run pytest`

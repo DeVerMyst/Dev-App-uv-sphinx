@@ -3,8 +3,9 @@ import sys
 
 # pour arriver à la racine du projet C:\GITHUB\Dev-App-uv-sphinx/api
 # On remonte à la racine, puis on descend dans 'api'
+sys.path.insert(0, os.path.abspath('../..'))
 sys.path.insert(0, os.path.abspath('../../api'))
-print(f"DEBUG: Sphinx cherche dans : {os.path.abspath('../../api')}")
+print(f"DEBUG: Sphinx cherche dans : {os.path.abspath('../..')}")
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -27,11 +28,11 @@ import sphinx_rtd_theme
 
 extensions = [
     'sphinx_rtd_theme',
-    'sphinx.ext.autodoc',  # Pour extraire la doc de ton code
+    'sphinx.ext.autodoc',  # Pour extraire la doc du code
     'sphinx.ext.napoleon', # Pour supporter les docstrings style Google/NumPy
-    'sphinx.ext.mathjax', # Pour latex 
-    "sphinx.ext.viewcode",
-    "myst_parser",    
+    'sphinx.ext.mathjax',  # Pour latex 
+    "sphinx.ext.viewcode", # pour afficher code source
+    "myst_parser",         # pour le markdown
 ]
 
 

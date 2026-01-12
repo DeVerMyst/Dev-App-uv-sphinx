@@ -28,7 +28,7 @@ uv sync
 
 > **Note :** `uv` installera automatiquement la bonne version de Python si vous ne l'avez pas.
 
-## 🚀 Lancement de l'API
+## Lancement de l'API
 
 Pour lancer l'application en mode développement (avec rechargement automatique) :
 
@@ -39,7 +39,7 @@ uv run uvicorn app:app --reload
 
 L'API sera accessible sur `http://127.0.0.1:8000`. Vous pouvez consulter la doc interactive (Swagger) sur `http://127.0.0.1:8000/docs`.
 
-## 🧪 Tests
+## Tests
 
 Pour exécuter la suite de tests avec **pytest** :
 
@@ -59,11 +59,11 @@ uv run sphinx-build -b html docs/source docs/build/html
 
 Ensuite, ouvrez le fichier `docs/build/html/index.html` dans votre navigateur.
 
-## 📂 Structure du projet
+## Structure du projet
 
-* `app.py` : Point d'entrée de l'API.
-* `modules/` : Logique métier de l'application.
-* `models/` : Modèles de données (Pydantic).
+* `api.app.py` : Point d'entrée de l'API.
+* `api.modules/` : Logique métier de l'application.
+* `api.models/` : Modèles de données (Pydantic).
 * `tests/` : Tests unitaires et d'intégration.
 * `docs/` : Fichiers sources de la documentation Sphinx.
 * `pyproject.toml` : Configuration du projet et dépendances.

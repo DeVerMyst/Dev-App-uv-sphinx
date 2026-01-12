@@ -3,21 +3,21 @@ Référence Technique
 
 Gestion des modèles
 -------------------
-.. automodule:: models.models
+.. automodule:: api.models.models
    :members:
    :undoc-members:
    :show-inheritance:
 
 Outils Mathématiques
 --------------------
-.. automodule:: modules.my_maths
+.. automodule:: api.modules.my_maths
    :members:
    :undoc-members:
    :show-inheritance:
 
 Logique métier
 --------------
-.. automodule:: modules.modules
+.. automodule:: api.modules.modules
    :members:
    :undoc-members:
    :show-inheritance:
