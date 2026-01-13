@@ -43,4 +43,13 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_rtd_theme"
+
+# 1. Assure-toi que cette ligne est décommentée et contient '_static'
 html_static_path = ['_static']
+
+# 2. Ajoute le chemin vers ton logo
+# Sphinx cherche automatiquement dans _static si le chemin n'est pas absolu
+html_logo = "_static/img/logo.png"
+
+# Optionnel : Titre de l'onglet du navigateur si tu veux changer le défaut
+html_title = "Documentation - Sphinx"
