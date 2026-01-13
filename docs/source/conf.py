@@ -52,4 +52,4 @@ html_static_path = ['_static']
 html_logo = "_static/img/logo.png"
 
 # Optionnel : Titre de l'onglet du navigateur si tu veux changer le défaut
-html_title = "Documentation - Sphinx"
+html_title = "Documentation - Sphinx - UV"
